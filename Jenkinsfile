@@ -3,13 +3,6 @@ def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="devtcs"
 def HTTP_PORT="8090"
 
-pipeline {
-    agent {
-        dockerfile {
-            filename 'Dockerfile'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
-    }
 node {
 
     stage('Initialize'){
